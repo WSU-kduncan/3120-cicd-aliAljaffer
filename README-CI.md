@@ -12,9 +12,9 @@
 # Run Project Locally
 
 - `sudo apt install -y docker`
-- how to build the container
-- how to run the container
-- how to view the project running in the container (open a browser...go to ip and port...)
+- `docker build -t proj4:0.1 .`
+- `docker run -it -p 1551:80 --name test proj4:0.1`
+- `localhost:1551`
 
 # DockerHub
 

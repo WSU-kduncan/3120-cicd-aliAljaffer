@@ -6,6 +6,6 @@ RUN rm -rf /var/www/html/index.html
 
 COPY website/ /var/www/html/
 
-RUN /usr/sbin/apache2 -D FOREGROUND
+# RUN /usr/sbin/apache2 -D FOREGROUND # runs by default, dont need
 
 EXPOSE 1551
