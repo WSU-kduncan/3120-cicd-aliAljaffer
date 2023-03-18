@@ -12,21 +12,26 @@
 # Run Project Locally
 
 - `sudo apt install -y docker`
-- `docker build -t proj4:0.1 .`
-- `docker run -it -p 1551:80 --name test proj4:0.1`
+- `docker build -t alialjaffer/ceg3120_project4 .`
+- `docker run -it -p 1551:80 --name test alialjaffer/ceg3120_project4:0.1`
 - `localhost:1551`
 
 # DockerHub
 
 - Process to create public repo in DockerHub
-- How to authenticate with DockerHub via CLI using Dockerhub credentials
-  - what credentials would you recommend providing?
-- How to push container to Dockerhub
+  1.  Headed to Dockerhub
+  2.  Clicked on `Repositories`
+  3.  Clicked on `Create repository`
+  4.  Picked a name and set it to public.
+- `docker login`
+  - Personally, I created an access token from the website and used that to authenticate.
+- `docker push alialjaffer/ceg3120_project4:latest`
 
 # GitHub Actions
 
 - Configuring GitHub Secrets
-  - What secrets were set based on what info
+  - DOCKER_USERNAME -> dockerhub username
+  - DOCKER_PASSWORD -> dockerhub password
 - Behavior of GitHub workflow
   - what does it do and when
   - what variables in workflow are custom to your project
