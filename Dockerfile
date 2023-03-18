@@ -1,7 +1,7 @@
 FROM ubuntu/apache2
 
-ADD website /var/www/html/website
+RUN mkdir /var/www/html/website && rm -rf /var/www/html/index.html && /usr/sbin/apache2 -D FOREGROUND
 
-RUN rm -rf /var/www/html/index.html && /usr/sbin/apache2 -D FOREGROUND
+ADD website /var/www/html/website
 
 EXPOSE 1551
