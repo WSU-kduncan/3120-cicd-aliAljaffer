@@ -14,7 +14,8 @@
 - `sudo apt install -y docker`
 - `docker build -t alialjaffer/ceg3120_project4 .`
 - `docker run -it -p 1551:80 --name test alialjaffer/ceg3120_project4:0.1`
-- - On a Linux host system, I was getting SIGWINCH when running with the -t flag which terminates the process. If it happens, just run without it.
+  - or `docker compose up`
+  - On a Linux host system, I was getting SIGWINCH when running with the -t flag which terminates the process. If it happens, just run without it.
 - `localhost:1551`
 
 # DockerHub
@@ -31,8 +32,8 @@
 # GitHub Actions
 
 - Configuring GitHub Secrets
-  - DOCKER_USERNAME -> dockerhub username
-  - DOCKER_PASSWORD -> dockerhub password
+  - `DOCKER_USERNAME` -> dockerhub username
+  - `DOCKER_PASSWORD` -> dockerhub password
 - Behavior of GitHub workflow
-  - On the event of `push` to the `main` branch, the workflow runs, setting up QEMU, Docker Buildx, and then logging into Dockerhub using the provided account credentials in GitHub Secrets. After logging in, the image will be built and (on successful build) will be pushed to the Dockerhub repo.
+  - On the event of `push` to the `main` branch, the workflow runs, setting up `QEMU`, `Docker Buildx`, and then logging into Dockerhub using the provided account credentials in GitHub Secrets. After logging in, the image will be built and (on successful build) will be pushed to the Dockerhub repo.
   - the entire `.yml` file can be used by anyone, but the secrets needed to actually login and push the image are custom to me.
