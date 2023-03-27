@@ -7,14 +7,14 @@
 - The point of this project is to familiarize ourselves with Docker containers and GitHub actions. Containers are isolated filesystems that can run on their own to perform a certain task. For this project, that task is to run an apache2 server for a website.
 
 - Part 4 - Diagramming goes here
-  - Include a diagram (or diagrams) of your entire workflow. Meaning it should start with a project change / update, the steps that happen in between, and end with the updated version when the server is queried (web page is accessed)
+  <img src="imgs/workflowDiagram.png" width="80%" height="80%" />
 
 # Run Project Locally
 
 - `sudo apt install -y docker`
 - `docker build -t alialjaffer/ceg3120_project4 .`
 - `docker run -it -p 1551:80 --name test alialjaffer/ceg3120_project4:0.1`
--   - On a Linux host system, I was getting SIGWINCH when running with the -t flag which terminates the process. If it happens, just run without it.
+- - On a Linux host system, I was getting SIGWINCH when running with the -t flag which terminates the process. If it happens, just run without it.
 - `localhost:1551`
 
 # DockerHub
@@ -34,15 +34,5 @@
   - DOCKER_USERNAME -> dockerhub username
   - DOCKER_PASSWORD -> dockerhub password
 - Behavior of GitHub workflow
-  - what does it do and when
-  - what variables in workflow are custom to your project
-
-# Deployment
-
-- Description of container restart script
-- Setting up a webhook on the server
-  - How you created you own listener
-  - How you installed the [webhook on GitHub](https://github.com/adnanh/webhook)
-  - How to keep the webhook running if the instance is on
-- Description of Webhook task definition file
-- Steps to set up a notifier in GitHub or DockerHub
+  - On the event of `push` to the `main` branch, the workflow runs, setting up QEMU, Docker Buildx, and then logging into Dockerhub using the provided account credentials in GitHub Secrets. After logging in, the image will be built and (on successful build) will be pushed to the Dockerhub repo.
+  - the entire `.yml` file can be used by anyone, but the secrets needed to actually login and push the image are custom to me.
