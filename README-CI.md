@@ -13,7 +13,7 @@
 
 - `sudo apt install -y docker`
 - `docker build -t alialjaffer/ceg3120_project4 .`
-- `docker run -it -p 1551:80 --name test alialjaffer/ceg3120_project4:0.1`
+- `docker run -it -p 1551:80 --name test alialjaffer/ceg3120_project4:latest`
   - or `docker compose up`
   - On a Linux host system, I was getting SIGWINCH when running with the -t flag which terminates the process. If it happens, just run without it.
 - `localhost:1551`

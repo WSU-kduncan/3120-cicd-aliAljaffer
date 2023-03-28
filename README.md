@@ -1,1 +1,1 @@
-<font size="4">Added docker compose file. Can now alternatively run using `docker compose up`.</font>
+<font size="4">Added docker compose file. Can now alternatively run using `docker compose up`. The docker compose file contains the port binds so we can skip having to write the long docker run command.</font>
