@@ -28,8 +28,7 @@
 ## Documentation
 
 - how to configure GH to message listener
-  - CICD Repo -> Settings -> Webhooks:
-    - for the payload url: `https://54.198.243.204:9000/hooks/restart-whk`
+  - My webhook URL is in my secrets, and I invoke it after the docker job is successfully completed.
 - To start webhook: `webhook -hooks /etc/webhook.conf -verbose`
 -
 
