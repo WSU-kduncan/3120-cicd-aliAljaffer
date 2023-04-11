@@ -10,7 +10,8 @@
 
 # Tags
 
-- How to generate a tag: `git add [tag_name]`
+- Tag creation: After a commit has been made, create a new tag using: `git add v1.0.0`.
+- Tag pushing: Then, to push the tag we just created, we'll use the command `git push origin v1.0.0`
 
 - Workflow:
 
