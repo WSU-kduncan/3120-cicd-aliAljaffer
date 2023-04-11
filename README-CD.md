@@ -25,6 +25,7 @@
 - The restart script names an image `ali-website`. It first tries to stop the image, then remove it, then pulls the latest version and finally runs it.
 
   - Script should be located in `/home/ubuntu/P5/`
+  - [Script](deployment/rstrt.sh)
 
 - Webhook:
 
@@ -38,6 +39,7 @@
 - Hook definition file:
   - `id` -> Helps us identify which webhook to trigger. `URL/hooks/id`
   - `execute-command` -> the script file to run on trigger
+  - [hooks.json](deployment/hooks.json)
 
 ## Documentation
 
