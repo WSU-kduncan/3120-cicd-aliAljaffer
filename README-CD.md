@@ -4,7 +4,9 @@
 
 # Project Overview
 
-- WIP
+- Continuos Deployment is the second part of the CI/CD process that deals with automating deployment of software/packages.
+  - I will be utilizing github actions to push the latest images to dockerhub in the first job, then the second job will use a webhook that is listening on an AWS EC2 instance to inform it that there's been a new update for the image. The webhook will run a script that stops, removes, pulls the image from Dockerhub, and then runs it in the instance.
+  - With this workflow, I can focus on just making changes to my website, and my automation will take care of the deployment and updating aspect.
 
 # Tags
 
@@ -47,6 +49,10 @@
 ![Sequential jobs](imgs/action.png)
 
 # Diagramming
+
+![Diagram](imgs/DeploymentDiagram.png)
+
+[PDF File](imgs/doodle.pdf)
 
 ## Debugging is sooo fun!
 
