@@ -47,3 +47,9 @@
 ![Sequential jobs](imgs/action.png)
 
 # Diagramming
+
+## Debugging is sooo fun!
+
+All my failed attempts at recording a successful run! :)
+
+![Failed attempts](imgs/FailedAttempts.png)
