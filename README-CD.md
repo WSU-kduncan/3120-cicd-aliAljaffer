@@ -8,21 +8,18 @@
 
 # Tags
 
-- How to generate a tag: `test`
+- How to generate a tag: `git add [tag_name]`
 
 - Workflow:
 
-  1.
-  2.
-  3.
+  1. Workflow triggers on pushes to the main branch, or on tags with major, minor, and patch. `v#.#.#`
+  2. On trigger, the workflow builds and pushes a new image to the dockerhub repository using the tags provided.
 
-- Docker repo link:
+- Docker repo link: [aliAljaffer/ceg3120_project4](https://hub.docker.com/repository/docker/alialjaffer/ceg3120_project4/general)
 
 # Deployment
 
-## Tasks
-
--
+- [How to install Docker on a Linux system](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 -
 
@@ -30,23 +27,8 @@
 
 ## Documentation
 
-- How to install docker:
-
-- Container restart script: `restart webhook/services?`
-
-  - location in instance:
-
-- setting up a webhook
-
-  - install adnanh's webhook
-
-  - how to start it
-
-- webhook task def file
-
-  - what it does
-  - location
-
-- how to configure GH/DH to message listener
+- how to configure GH to message listener
+  - CICD Repo -> Settings -> Webhooks:
+    - for the payload url: `https://54.198.243.204:9000/hooks/restart-whk`
 
 # Diagramming

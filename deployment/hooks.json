@@ -1,0 +1,7 @@
+[
+  {
+    "id": "restart-whk",
+    "execute-command": "/home/ubuntu/P5/rstrt.sh",
+    "command-working-directory": "/home/ubuntu/"
+  }
+]

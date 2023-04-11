@@ -24,6 +24,13 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: alialjaffer/ceg3120_project4
+          flavor: latest=auto
+          # Tags to be sent, in order: latest, full version, major.minor, and major.
+          # I.e. v1.2.3 will be sent as:
+          # latest
+          # v1.2.3
+          # v1.2
+          # v1
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
